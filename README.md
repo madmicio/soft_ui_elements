@@ -16,7 +16,7 @@
         
         
 ```
-![all](examples/all.gif)
+![all](examples/UNADJUSTEDNONRAW_mini_14.jpg)
 
 ### Main Options
 | Name | Type | Default | Supported options | Description |
