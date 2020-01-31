@@ -16,6 +16,7 @@
         
         
 ```
+![all](examples/all.gif)
 
 ### Main Options
 | Name | Type | Default | Supported options | Description |
