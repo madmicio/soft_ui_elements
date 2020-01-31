@@ -43,7 +43,6 @@
 ### entity Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `entity` | string | **Required** | `custom:soft_ui_sensor_card_small` | Type of the card |
 | `entities` | string | optional | `sensor.ac` | entity_id |
 | `name` | string | optional | `External temperature` | Define the name of the sensor |
 | `icon` | string | optional | `mdi:themometer` | Icon to display. Will be overriden by the icon defined in a state |
