@@ -1,3 +1,5 @@
+# NOTE: optimized for the soft_ui theme for the moment
+
 # locelace config example
 
 ```yaml
