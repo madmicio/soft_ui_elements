@@ -23,6 +23,9 @@ class SoftUiSensorCard extends LitElement {
     var innershadow = this.config.innershadow == "enable" ? true : false;
     var iconemboss = this.config.iconemboss == "enable" ? true : false;
     var background = this.config.background ? this.config.background : "transparent";
+
+    var min = this.config.min ? this.config.min : "0";
+    var max = this.config.max ? this.config.max : "100";
     
     
     return html`
@@ -30,6 +33,7 @@ class SoftUiSensorCard extends LitElement {
             <div class="${innershadow ? 'inner-main' : 'inner-main_no_shadow'}">
             ${this.config.entities.map(ent => {
                  const stateObj = this.hass.states[ent.entity];
+                 const value = 100 * (this.hass.states[ent.entity].state - ent.min) / (ent.max - ent.min);
                 return stateObj ? html`
                     <div class="frame_1">
                       <div class="frame_2">
@@ -37,10 +41,10 @@ class SoftUiSensorCard extends LitElement {
                               <div class="${iconemboss? 'icon icon_shadow' : 'icon'}">
                                   <ha-icon icon="${ent.icon  || stateObj.attributes.icon}" style:"/>
                                 </div>
-                                <div class="left_row text">${ent.name || stateObj.attributes.friendly_name} ${stateObj.state} °</div>  
+                                <div class="left_row text">${ent.name || stateObj.attributes.friendly_name} ${stateObj.state}${stateObj.attributes.unit_of_measurement}</div>  
                                 <div class="left_row">
                                   <div class="back_bar">
-                                    <div class="bar_value" style="width:${Math.round(stateObj.state)}%;"></div>
+                                    <div class="bar_value" style="width:${value}%;"></div>
                                   </div>
                                 </div>
                               </div>
@@ -57,12 +61,8 @@ class SoftUiSensorCard extends LitElement {
     if (!config.entities) {
       throw new Error("You need to define entities");
     }
-    if (!config.title) {
-      throw new Error("You need to define a title");
-    }
-    if (!config.icon) {
-      throw new Error("You need to define a icon");
-    }
+
+
     this.config = config;
   }
 
