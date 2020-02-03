@@ -18,7 +18,12 @@
         
         
 ```
-![all](examples/UNADJUSTEDNONRAW_mini_14.jpg)
+![all](examples/soft_ui_style.png)
+
+![all](examples/flat_style.png)
+
+![all](examples/flat_style.png)
+
 
 ## Install
 
