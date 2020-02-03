@@ -22,7 +22,7 @@
 
 ![all](examples/flat_style.png)
 
-![all](examples/flat_style.png)
+![all](examples/new_card.mov)
 
 
 ## Install
