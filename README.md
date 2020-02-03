@@ -66,5 +66,5 @@ flat style
 | `entities` | string | optional | `sensor.ac` | entity_id |
 | `name` | string | optional | `External temperature` | Define the name of the sensor |
 | `icon` | string | optional | `mdi:icon` | Icon to display. Will be overriden by the icon defined in a state |
-| `type` | string | optional | sensor / button | define the card style and function. in sensor mode return the sensor information, 
+| `type` | string | **Required** | sensor / button | define the card style and function. in sensor mode return the sensor information, 
 in button mode the icon becomes a button to activate / deactivate the entity |
