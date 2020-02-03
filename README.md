@@ -19,10 +19,12 @@
         
 ```
 ![all](examples/soft_ui_style.png)
+soft_ui style
+
 
 ![all](examples/flat_style.png)
+flat style
 
-![all](examples/new_card.mov)
 
 
 ## Install
@@ -43,7 +45,7 @@
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type` | string | **Required** | `custom:soft_ui_sensor_card_small` | Type of the card |
-| `entities` | string | optional | entity | list of entitity |
+| `entities` | string | **Required** | entity | list of entitity |
 | `innershadow` | object list | optional | enable/disable | enable - disable innershadow in the card |
 | `iconemboss` | object | optional | enable/disable | enable - disable icon emboss effect |
 
@@ -52,4 +54,6 @@
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `entities` | string | optional | `sensor.ac` | entity_id |
 | `name` | string | optional | `External temperature` | Define the name of the sensor |
-| `icon` | string | optional | `mdi:themometer` | Icon to display. Will be overriden by the icon defined in a state |
+| `icon` | string | optional | `mdi:icon` | Icon to display. Will be overriden by the icon defined in a state |
+| `type` | string | optional | sensor / button | define the card style and function. in sensor mode return the sensor information, 
+in button mode the icon becomes a button to activate / deactivate the entity |
