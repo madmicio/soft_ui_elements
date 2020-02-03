@@ -23,6 +23,7 @@ class SoftUiGeneralPanelCard extends LitElement {
     var innershadow = this.config.innershadow == "enable" ? true : false;
     var iconemboss = this.config.iconemboss == "enable" ? true : false;
     var background = this.config.background ? this.config.background : "transparent";
+   
  
 
     var min = this.config.min ? this.config.min : "0";
@@ -35,6 +36,7 @@ class SoftUiGeneralPanelCard extends LitElement {
             ${this.config.entities.map(ent => {
                  const stateObj = this.hass.states[ent.entity];
                  const value = 100 * (this.hass.states[ent.entity].state - ent.min) / (ent.max - ent.min);
+
                 return stateObj ? html`
                     <div class="frame_1">
                               <div class="grid-container">
@@ -53,7 +55,7 @@ class SoftUiGeneralPanelCard extends LitElement {
                                     <div class="${iconemboss? 'icon icon_shadow' : 'icon'}" style="${stateObj.state =="on" ? 'background-color: var(--active-background-button-color);' : 'background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard);'}" @click=${e => this._switch(stateObj)}>
                                         <ha-icon icon="${ent.icon  || stateObj.attributes.icon}" style="color:${stateObj.state =="on" ? 'var(--state-icon-secondary-color);' : 'var(state-icon-color);'}"/>
                                       </div>
-                                      <div class="left_row text ">${ent.name || stateObj.attributes.friendly_name} ${stateObj.state}</div>  
+                                      <div class="left_row text ">${ent.name || stateObj.attributes.friendly_name} ${stateObj.state} </div>  
                                       <div class="left_row label">${ent.label}</div> 
                                         </div>
                               ` : html`
