@@ -292,4 +292,4 @@ class SoftUiGeneralCard extends LitElement {
   
 }
 
-customElements.define('soft-ui-general_card', SoftUiGeneralCard);
+customElements.define('soft_ui_general_card', SoftUiGeneralCard);
