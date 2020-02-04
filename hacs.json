@@ -1,6 +1,6 @@
 {
 "name": "soft ui button - sensor card",
 "content_in_root": true,
-"filename": "soft-ui-general-cardl.js",
+"filename": "soft-ui-general-card.js",
 "render_readme" : true
 }
