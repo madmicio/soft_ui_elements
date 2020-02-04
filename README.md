@@ -42,13 +42,13 @@ flat style
 
 ### Manual install
 
-1. Download and copy `soft_ui_sensor_card_small.js` from (https://https://github.com/madmicio/soft_ui) into your `config/www` directory.
+1. Download and copy `soft_ui_general_card.js` from (https://https://github.com/madmicio/soft_ui) into your `config/www` directory.
 
-2. Add a reference to `soft_ui_sensor_card_small.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
+2. Add a reference to `soft_ui_general_cardl.js` inside your `ui-lovelace.yaml` or at the top of the *raw config editor UI*:
 
   ```yaml
   resources:
-    - url: /local/soft_ui_sensor_card_small.js
+    - url: /local/soft_ui_general_card.js
       type: module
   ```
 
