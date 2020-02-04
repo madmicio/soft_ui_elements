@@ -7,7 +7,7 @@ soft ui general card
 
 
 ```yaml
-- type: 'custom:soft-ui-general_panel_card'
+- type: 'custom:soft-ui-general_card'
   background: transparent
   innershadow: enable
   iconemboss: enable
