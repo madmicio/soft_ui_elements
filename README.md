@@ -55,7 +55,7 @@ flat style
 ### Main Options
 | Name | Type | Default | Supported options | Description |
 | -------------- | ----------- | ------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type` | string | **Required** | `custom:soft-ui-sensor-card-small` | Type of the card |
+| `type` | string | **Required** | `custom:soft-ui-general_card` | Type of the card |
 | `entities` | string | **Required** | entity | list of entitity |
 | `innershadow` | object list | optional | enable/disable | enable - disable innershadow in the card |
 | `iconemboss` | object | optional | enable/disable | enable - disable icon emboss effect |
