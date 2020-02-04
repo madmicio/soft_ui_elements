@@ -3,7 +3,7 @@
 # locelace config example
 
 ```yaml
-- type: 'custom:soft-ui-general_panel_card'
+- type: 'custom:soft_ui_general_card'
   background: transparent
   innershadow: enable
   iconemboss: enable
