@@ -29,6 +29,19 @@
         
         
 ```
+config for sensor element with custom sensor value
+
+```yaml
+- entity: script.spegni_luci
+  name: Spegni Tutto
+  icon: 'mdi:lightbulb-outline'
+  cardtype: sensor-script
+  label: luci
+  display_value: sensor.number_of_lights_on
+```                            
+                            
+                            
+                            
 ![all](examples/soft_ui_style.png)
 soft_ui style
 
