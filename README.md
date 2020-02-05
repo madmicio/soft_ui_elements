@@ -24,7 +24,7 @@
     - entity: light.luce_bagno_piccolo
       name: luce del pc
       icon: 'mdi:lightbulb-outline'
-      cardtype: light
+      cardtype: button
       label: led
         
         
