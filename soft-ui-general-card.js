@@ -35,6 +35,7 @@ class SoftUiGeneralCard extends LitElement {
             <div class="${innershadow ? 'inner-main' : 'inner-main_no_shadow'}">
             ${this.config.entities.map(ent => {
                  const stateObj = this.hass.states[ent.entity];
+                 
                  const value = 100 * (this.hass.states[ent.entity].state - ent.min) / (ent.max - ent.min);
 
                 return stateObj ? html`
@@ -60,6 +61,29 @@ class SoftUiGeneralCard extends LitElement {
                                         </div>
                               ` : html`
                               `}
+                              ${ent.cardtype == "sensor-script" ? html`
+                                    <div class="${iconemboss? 'icon icon_shadow click' : 'icon click'}" style="${this.hass.states[ent.display_value].state > 0 ? 'background-color: var(--active-background-button-color);' : 'background-color: var(--deactive-background-button-color); border: solid 1px var(--button-border-standard);'}" @click=${e => this._switch(stateObj)}>
+                                        <ha-icon icon="${ent.icon  || stateObj.attributes.icon}" style="color:${this.hass.states[ent.display_value].state > 0 ? 'var(--state-icon-secondary-color);' : 'var(state-icon-color);'}"/>
+                                      </div>
+                                      <div class="left_row text ">${ent.name || stateObj.attributes.friendly_name}</div> 
+                                      ${this.hass.states[ent.display_value].state > 0 ? html`
+                                      <div class="left_row label">luci accese: ${this.hass.states[ent.display_value].state }</div> 
+                                      ` : html`
+                                      <div class="left_row label">luci spente</div> 
+                                      `}
+                                        </div>
+                              ` : html`
+                              `}
+                              ${ent.cardtype == "script" ? html`
+                                    <div class="${iconemboss? 'icon icon_shadow click' : 'icon click'}" style="background-color: var(--active-background-button-color);" @click=${e => this._switch(stateObj)}>
+                                        <ha-icon icon="${ent.icon  || stateObj.attributes.icon}" style="color: var(--state-icon-secondary-color);"/>
+                                      </div>
+                                      <div class="left_row text ">${ent.name || stateObj.attributes.friendly_name}</div>  
+                                      <div class="left_row label">${ent.label}</div> 
+                                        </div>
+                              ` : html`
+                              `}
+                              
                 `: html``; 
             })}
             </div>
